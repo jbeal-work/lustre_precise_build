@@ -1,9 +1,12 @@
 #!/bin/sh
 mkdir -p /vagrant/lustre/downloads
 cd  /vagrant/lustre/downloads
-if [ "`md5sum lustre-source-2.5.19-ddn1.0_2.6.32_431.17.1.el6_lustre.es118.x86_64_ES.x86_64.rpm|  awk '{print $1}' `" != "5ad9114ddbca521fb8976e47b99552e5" ] ; then 
-  rm -f lustre-source-2.5.19-ddn1.0_2.6.32_431.17.1.el6_lustre.es118.x86_64_ES.x86_64.rpm
-  wget http://eu.ddn.com:8080/lustre/lustre-source-2.5.19-ddn1.0_2.6.32_431.17.1.el6_lustre.es118.x86_64_ES.x86_64.rpm
+#if [ "`md5sum lustre-source-2.5.19-ddn1.0_2.6.32_431.17.1.el6_lustre.es118.x86_64_ES.x86_64.rpm|  awk '{print $1}' `" != "5ad9114ddbca521fb8976e47b99552e5" ] ; then 
+#  rm -f lustre-source-2.5.19-ddn1.0_2.6.32_431.17.1.el6_lustre.es118.x86_64_ES.x86_64.rpm
+#  wget http://eu.ddn.com:8080/lustre/lustre-source-2.5.19-ddn1.0_2.6.32_431.17.1.el6_lustre.es118.x86_64_ES.x86_64.rpm
+#fi
+if [ "`md5sum lustre-2.5.27.ddnpf2.tar.gz |  awk '{print $1}' `" != "d2218865442183a788e91b99895d785c" ] ; then
+  exit 0
 fi
 #wget ftp://ftp.redhat.com/pub/redhat/linux/enterprise/6Server/en/os/SRPMS/kernel-2.6.32-431.17.1.el6.src.rpm
 if [  "`md5sum linux-2.6.32-431.17.1.el6.x86_64.tar.gz |  awk '{print $1}' `" != "8ec9076424ef8a390f22d3532537755c" ] ; then
