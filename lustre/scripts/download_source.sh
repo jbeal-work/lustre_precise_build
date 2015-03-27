@@ -2,6 +2,7 @@
 mkdir -p /vagrant/lustre/downloads
 cd  /vagrant/lustre/downloads
 if [ "`md5sum sanger-lustre-2.5.29.ddnpf3.tar.gz |  awk '{print $1}' `" != "e7e98efe275801ece3e8a5f4f442f002" ] ; then
+   rm -f sanger-lustre-2.5.29.ddnpf3.tar.gz
    wget https://woscloud.corp.ddn.com/v2/files/ZmY4YzE2YjlkZWI0ZGYzOWE0ZTExZmZlYzJiOTZhNmJm/content/inline/sanger-lustre-2.5.29.ddnpf3.tar.gz
 fi
 #wget ftp://ftp.redhat.com/pub/redhat/linux/enterprise/6Server/en/os/SRPMS/kernel-2.6.32-431.17.1.el6.src.rpm
