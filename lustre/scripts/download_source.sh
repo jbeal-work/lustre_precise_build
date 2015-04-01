@@ -1,9 +1,9 @@
 #!/bin/sh
 mkdir -p /vagrant/lustre/downloads
 cd  /vagrant/lustre/downloads
-if [ "`md5sum sanger-lustre-2.5.29.ddnpf3.tar.gz |  awk '{print $1}' `" != "e7e98efe275801ece3e8a5f4f442f002" ] ; then
-   rm -f sanger-lustre-2.5.29.ddnpf3.tar.gz
-   wget https://woscloud.corp.ddn.com/v2/files/ZmY4YzE2YjlkZWI0ZGYzOWE0ZTExZmZlYzJiOTZhNmJm/content/inline/sanger-lustre-2.5.29.ddnpf3.tar.gz
+if [ "`md5sum  lustre-2.5.29.ddnpf3-2.6.32_431.29.2.el6_lustre.2.5.29.ddnpf3.x86_64_g6a6b29c.src.rpm |  awk '{print $1}' `" != "2d850929f261df29e96a220a01e333e9" ] ; then
+   rm -f  lustre-2.5.29.ddnpf3-2.6.32_431.29.2.el6_lustre.2.5.29.ddnpf3.x86_64_g6a6b29c.src.rpm 
+   wget  wget https://woscloud.corp.ddn.com/v2/files/ZmY4YzE2YjlkZWI0ZDFmZjk0ZTExNmQzZDg0ZmUxYzlk/content/inline/lustre-2.5.29.ddnpf3-2.6.32_431.29.2.el6_lustre.2.5.29.ddnpf3.x86_64_g6a6b29c.src.rpm 
 fi
 #wget ftp://ftp.redhat.com/pub/redhat/linux/enterprise/6Server/en/os/SRPMS/kernel-2.6.32-431.17.1.el6.src.rpm
 if [  "`md5sum linux-2.6.32-431.17.1.el6.x86_64.tar.gz |  awk '{print $1}' `" != "8ec9076424ef8a390f22d3532537755c" ] ; then
